@@ -1,0 +1,72 @@
+<html>
+ <head>
+  <title>div Animation</title>	 
+  
+  
+  <!---======الجافاسكريبت=====---->
+  <script type="text/javascript">
+ 
+ var imgObj = null; 
+ function init(){
+ imgObj = 
+  //استدعاء div
+  document.getElementById('myDiv');
+   imgObj.style.position= 'relative'; imgObj.style.left = '100px'; }
+	function moveRight(){
+	if(parseInt(imgObj.style.left ) <= window.screen.width){
+	imgObj.style.left = 
+//زيادة  الحركة يسار
+parseInt(imgObj.style.left) + 10 + 'px'; }} 
+	function moveLeft(){ 
+	if(parseInt(imgObj.style.left) >=0){
+	imgObj.style.left = 
+	
+	
+	//نقص الحركة يسار
+	parseInt(imgObj.style.left) - 10 + 'px'; }} 
+	function moveUp(){ 
+	imgObj.style.top = parseInt(imgObj.style.top) - 10 + 'px'; }
+	function moveDown(){ 
+	imgObj.style.top = parseInt(imgObj.style.top) + 10 + 'px'; }
+	
+	window.onload =init;
+//by:khalid abou jaafer
+ 
+ </script> 
+ 
+ <!--======css====---->
+ <style>
+   body {
+	 background-color: black;
+	 color : white;
+   }
+   
+   #myDiv{
+       height:240px;
+       width:180px;
+       background:orange;
+       text-align:center;
+   }
+   
+   input{
+       margin-left:20%;
+   }
+   
+   p{
+       text-align:center;
+   }
+ </style>
+ </head> 
+ <body> 
+ <form>
+ <div id="myDiv">
+  <h1> div هذا</h1>
+</div>
+  
+  <p> div عندما نضغط على الزر يتحرك</p> 
+  <input type="button" value=" <<يسار" onclick="moveLeft();" />
+  <input type="button" value="يمين >>" onclick="moveRight();" /> 
+  
+  </form> 
+  </body> 
+  </html>
